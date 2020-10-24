@@ -11,7 +11,7 @@ const useHttp = () => {
   const request: IRequest = useCallback(
     async (url, method = 'GET', body = null, headers = {}) => {
       try {
-        const baseUrl = 'http://localhost:5000' + url
+        const baseUrl = 'https://nameless-sea-96063.herokuapp.com/' + url
         if (body) {
           body = JSON.stringify(body)
           headers['Content-Type'] = 'application/json'

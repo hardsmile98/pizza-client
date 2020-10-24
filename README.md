@@ -4,8 +4,7 @@ Project shop using MERN stack + typescript.
 
 This is the frontend repo built with React+typescript. Backend repo [click here](https://github.com/hardsmile98/pizza-server)
 
-State manager: Redux
-Router: React-router-dom
+State manager: Redux; Router: React-router-dom
 
 ## Running Locally
 

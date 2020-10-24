@@ -1,0 +1,51 @@
+.OrderItem {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 15px 10px;
+  border: 1px solid rgb(186, 191, 208);
+  margin-bottom: 10px;
+}
+
+.Items {
+  padding-right: 15px;
+  font-weight: 500;
+  width: calc(100% - 260px);
+}
+
+.Price {
+  width: 100px;
+  padding-right: 10px;
+}
+
+.Date {
+  text-align: right;
+  width: 160px;
+}
+
+@media screen and (max-width: 768px) {
+  .Price {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .OrderItem {
+    flex-wrap: wrap;
+  }
+
+  .Items {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .Price {
+    text-align: left;
+    width: 45%;
+  }
+
+  .Date {
+    text-align: right;
+    width: 55%;
+  }
+}

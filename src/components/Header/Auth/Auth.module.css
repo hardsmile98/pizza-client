@@ -1,0 +1,62 @@
+.Auth {
+  width: 400px;
+}
+
+.Form {
+  margin-top: 20px;
+}
+
+.Error {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.Button {
+  border-radius: 8px;
+  padding: 0px 12px;
+  cursor: pointer;
+  user-select: none;
+  background: rgb(255, 105, 0);
+  color: #fff;
+  width: 180px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s background ease-in;
+}
+
+.Button:hover {
+  background: rgb(240, 95, 38);
+}
+
+.Button:disabled {
+  cursor: not-allowed;
+  background: rgba(255, 106, 0, 0.5);
+}
+
+.Switch {
+  margin-top: 10px;
+}
+
+.Link {
+  cursor: pointer;
+  color: rgb(255, 105, 0);
+  transition: 0.3s color ease-in;
+}
+
+.Link:hover {
+  color: rgb(240, 95, 38);
+}
+
+@media screen and (max-width: 768px) {
+  .Auth {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Auth {
+    width: 100%;
+  }
+}

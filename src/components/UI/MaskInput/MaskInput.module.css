@@ -1,0 +1,20 @@
+.MaskInput {
+  margin-bottom: 15px;
+}
+
+.MaskInput p {
+  padding-bottom: 5px;
+}
+
+.MaskInput input {
+  height: 34px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #cdd0d5;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.MaskInput input:focus {
+  border: 1px solid rgb(255, 105, 0);
+}

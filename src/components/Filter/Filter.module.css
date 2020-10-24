@@ -1,0 +1,40 @@
+.SortTitle svg {
+  margin-right: 5px;
+}
+
+.SortVal {
+  position: relative;
+  margin-left: 3px;
+  color: rgb(255, 105, 0);
+  cursor: pointer;
+  border-bottom: 1px dotted #e65100;
+}
+
+.sortPopup {
+  z-index: 3;
+  position: absolute;
+  left: -25px;
+  top: 10px;
+  margin-top: 15px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  min-width: 140px;
+  z-index: 1;
+  display: none;
+}
+
+.Active {
+  display: block;
+}
+
+.List {
+  list-style: disc;
+  padding: 0 25px;
+}
+
+.List li:hover {
+  text-decoration: underline;
+}

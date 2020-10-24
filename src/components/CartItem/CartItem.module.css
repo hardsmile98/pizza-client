@@ -1,0 +1,110 @@
+.CartItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 95px;
+  border-bottom: 1px solid #f1f2f5;
+  padding: 15px 0;
+}
+
+.Image {
+  width: 70px;
+  height: 70px;
+  margin-right: 12px;
+}
+
+.Product {
+  width: calc(100% - 325px);
+  padding-right: 12px;
+}
+
+.Title {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.Desc {
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #73798c;
+}
+
+.Buttons {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Buttons button {
+  font-size: 16px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: #fff;
+  color: rgb(255, 105, 0);
+  border: 1px solid rgb(255, 105, 0);
+  transition: background-color 0.15s;
+}
+
+.Buttons button:hover {
+  background-color: rgba(255, 105, 0, 0.1);
+}
+
+.Counter {
+  width: 40%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.Price {
+  width: 100px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.Delete {
+  width: 30px;
+  height: 30px;
+  margin-left: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: rgb(255, 105, 0);
+  transition: background 0.3s ease;
+}
+
+.Delete:hover {
+  background: rgb(240, 95, 38);
+}
+
+@media screen and (max-width: 480px) {
+  .CartItem {
+    flex-wrap: wrap;
+  }
+
+  .Image {
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+
+  .Product {
+    width: calc(100% - 80px);
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .Buttons {
+    width: 110px;
+  }
+
+  .Price {
+    width: calc(100% - 155px);
+  }
+
+  .Delete {
+    margin-left: 15px;
+  }
+}

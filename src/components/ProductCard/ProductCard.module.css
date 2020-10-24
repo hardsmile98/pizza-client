@@ -1,0 +1,117 @@
+.ProductCard {
+  width: calc(25% - 20px);
+  margin: 0 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.Image {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: top 0.15s ease-out;
+}
+
+.Image:hover {
+  top: 3px;
+}
+
+.Buttons {
+  margin-top: 5px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Buttons button {
+  font-size: 16px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: #fff;
+  color: rgb(255, 105, 0);
+  border: 1px solid rgb(255, 105, 0);
+}
+
+.Counter {
+  font-size: 20px;
+}
+
+.Counter span {
+  font-size: 14px;
+  color: rgba(70, 70, 70, 0.55);
+}
+
+.Title {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Desc {
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #73798c;
+}
+
+.Bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Price span {
+  margin-left: 3px;
+}
+
+.Add {
+  min-width: 110px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 12px;
+  cursor: pointer;
+  user-select: none;
+  background: rgb(255, 105, 0);
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 992px) {
+  .ProductCard {
+    width: calc(33.333% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ProductCard {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ProductCard {
+    width: calc(100% - 20px);
+  }
+}

@@ -1,0 +1,56 @@
+.Page {
+  padding: 15px 0;
+}
+
+.Page h1 {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.Wrap {
+  padding: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.Order {
+  padding: 40px 0;
+}
+
+.NotFound {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.NotFound svg {
+  width: 134px;
+  height: 34px;
+}
+
+.NotFound p {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.NotFound a {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  height: 55px;
+  line-height: 55px;
+  color: #ff6900;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ff6900;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+}
+
+.NotFound a:hover {
+  border-color: #d96334;
+  color: #d96334;
+}

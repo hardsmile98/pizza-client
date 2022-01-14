@@ -8,11 +8,9 @@ import Header from './components/Header/Header'
 import Loader from './components/Loader/Loader'
 import Container from './hoc/Container'
 import NotFound from './pages/NotFound'
-import PizzaPage from './pages/PizzaPage'
+import ProductPage from './pages/ProductPage'
 import { autoLogin } from './store/actions/auth'
 import { getTotal, setItemsCart } from './store/actions/cart'
-import SnaksPage from './pages/SnaksPage'
-import DrinksPage from './pages/DrinksPage'
 import CartPage from './pages/CartPage'
 import CabinetPage from './pages/CabinetPage'
 
@@ -38,31 +36,6 @@ const App: React.FC = () => {
     localStorage.setItem('cartItems', JSON.stringify(items))
   }, [items, dispatch])
 
-  let routes = (
-    <Switch>
-      <Redirect exact from="/" to="/pizza" />
-      <Route path="/pizza" component={PizzaPage} />
-      <Route path="/snacks" component={SnaksPage} />
-      <Route path="/drinks" component={DrinksPage} />
-      <Route path="/cart" component={CartPage} />
-      <Route component={NotFound} />
-    </Switch>
-  )
-
-  if (!!token) {
-    routes = (
-      <Switch>
-        <Redirect exact from="/" to="/pizza" />
-        <Route path="/pizza" component={PizzaPage} />
-        <Route path="/snacks" component={SnaksPage} />
-        <Route path="/drinks" component={DrinksPage} />
-        <Route path="/cart" component={CartPage} />
-        <Route path="/cabinet" component={CabinetPage} />
-        <Route component={NotFound} />
-      </Switch>
-    )
-  }
-
   if (!ready) {
     return <Loader />
   }
@@ -70,7 +43,23 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Container>{routes}</Container>
+      <Container>
+        <Switch>
+          <Redirect exact from="/" to="/pizza" />
+          <Route path="/pizza" render={() => <ProductPage product="pizza" />} />
+          <Route
+            path="/snacks"
+            render={() => <ProductPage product="snacks" />}
+          />
+          <Route
+            path="/drinks"
+            render={() => <ProductPage product="drinks" />}
+          />
+          <Route path="/cart" component={CartPage} />
+          {token && <Route path="/cabinet" component={CabinetPage} />}
+          <Route component={NotFound} />
+        </Switch>
+      </Container>
       <Footer />
     </BrowserRouter>
   )

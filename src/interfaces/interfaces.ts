@@ -25,3 +25,7 @@ export interface IOrderItem {
   total: number
   createdAt: Date
 }
+
+export interface TProductPageProps {
+  product: 'pizza' | 'snacks' | 'drinks'
+}

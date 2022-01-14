@@ -3,9 +3,9 @@ import classes from './StylePage.module.css'
 import Filter from '../components/Filter/Filter'
 import ProductCard from '../components/ProductCard/ProductCard'
 import useHttp from '../hooks/useHttp'
-import { IProduct } from '../interfaces/interfaces'
+import { IProduct, TProductPageProps } from '../interfaces/interfaces'
 
-const SnaksPage: React.FC = () => {
+const ProductPage: React.FC<TProductPageProps> = ({ product }) => {
   const { request } = useHttp()
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([] as Array<IProduct>)
@@ -13,12 +13,12 @@ const SnaksPage: React.FC = () => {
 
   const fetch = useCallback(async () => {
     try {
-      const data: Array<IProduct> = await request('/api/v1/product/snacks')
+      const data: Array<IProduct> = await request(`/api/v1/product/${product}`)
       setProducts(data)
       setFetchData(data)
       setLoading(false)
     } catch (e) {}
-  }, [request])
+  }, [request, product])
 
   const sortTitle = () => {
     const sortedByTitleProducts = products.slice().sort((a, b) => {
@@ -51,18 +51,18 @@ const SnaksPage: React.FC = () => {
   if (loading) {
     return (
       <div className={classes.Page}>
-        <h1>Закуска</h1>
+        <h1>Пицца</h1>
         <div className={classes.Wrap}>
-          {Array(5)
+          {Array(8)
             .fill(0)
             .map(() => (
               <ProductCard
                 key={Math.random()}
                 _id={String(Math.random())}
                 price={300}
-                title="Закуска"
-                description="Описание самой лучшей закуски"
-                image="https://svgshare.com/i/QmR.svg"
+                title="Пицца"
+                description="Описание самой вкусной пиццы"
+                image="https://svgshare.com/i/QjW.svg"
               />
             ))}
         </div>
@@ -72,7 +72,7 @@ const SnaksPage: React.FC = () => {
 
   return (
     <div className={classes.Page}>
-      <h1>Закуска</h1>
+      <h1>Пицца</h1>
       <Filter
         sortTitle={sortTitle}
         sortPrice={sortPrice}
@@ -94,4 +94,4 @@ const SnaksPage: React.FC = () => {
   )
 }
 
-export default SnaksPage
+export default ProductPage
